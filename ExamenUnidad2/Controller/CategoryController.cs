@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ExamenUnidad2.Entities;
+using Microsoft.AspNetCore.Mvc;
+
+namespace ExamenUnidad2.Controller
+{
+    [ApiController] 
+    [Route("api/inventario")]
+    public class CategoryController : ControllerBase
+    {
+        private readonly List<CategoryEntities> _inventario; 
+
+        public CategoryController()
+        {
+            _inventario = new List<CategoryEntities>();
+            _inventario.Add(new CategoryEntities{});
+            _inventario.Add(new CategoryEntities{});
+            _inventario.Add(new CategoryEntities{});
+            _inventario.Add(new CategoryEntities{});
+            
+
+        }
+
+        [HttpGet]//Este método responde a las peticiones GET sin parámetros (es decir, cuando se pide /api/categories). Devuelve toda la lista de categorías usando Ok(_categories). Ok() es un método que responde con un código 200 (éxito) y los datos.
+        public IActionResult GetAll()
+        {
+            return Ok(_inventario);
+        }
+
+    }
+}
