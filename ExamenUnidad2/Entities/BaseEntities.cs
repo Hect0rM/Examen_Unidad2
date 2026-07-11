@@ -15,7 +15,7 @@ namespace ExamenUnidad2.Entities
         public string? Nombre { get; set; } 
 
         [Column("Precio de Compra")] 
-        public decimal PrecioDeCompra { get; set; }
+        public int PrecioDeCompra { get; set; }
 
         [Column("Precio de Venta")] 
         public decimal PrecioDeVenta { get; set; } 
@@ -27,7 +27,10 @@ namespace ExamenUnidad2.Entities
         public decimal Margen { get; set; }
 
         [Column("Inventario")] 
-        public int Inventario { get; set; }
+        public decimal Inventario { get; set; }
+
+        [Column("Cantidad")] 
+        public int Cantidad { get; set; }
 
 
     }

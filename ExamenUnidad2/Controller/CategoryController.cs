@@ -16,10 +16,10 @@ namespace ExamenUnidad2.Controller
         public CategoryController()
         {
             _inventario = new List<CategoryEntities>();
-            _inventario.Add(new CategoryEntities{});
-            _inventario.Add(new CategoryEntities{});
-            _inventario.Add(new CategoryEntities{});
-            _inventario.Add(new CategoryEntities{});
+            _inventario.Add(new CategoryEntities{Nombre = "1", PrecioDeVenta = 2000, PrecioDeCompra = 1000, Cantidad = 4 , Inventario = 4*1000, Margen = 2000-1000, Utilidad = (2000/1000)*100 });
+            _inventario.Add(new CategoryEntities{Nombre = "2", PrecioDeVenta = 2000, PrecioDeCompra = 1000, Cantidad = 5 , Inventario = 5*1000, Margen = 2000-1000, Utilidad = (2000/1000)*100});
+            _inventario.Add(new CategoryEntities{Nombre = "3", PrecioDeVenta = 2000, PrecioDeCompra = 1000, Cantidad = 7 , Inventario = 7*1000, Margen = 2000-1000, Utilidad = (2000/1000)*100});
+            _inventario.Add(new CategoryEntities{Nombre = "4", PrecioDeVenta = 2000, PrecioDeCompra = 1000, Cantidad = 9 , Inventario = 9*1000, Margen = 2000-1000, Utilidad = (2000/1000)*100});
             
 
         }
