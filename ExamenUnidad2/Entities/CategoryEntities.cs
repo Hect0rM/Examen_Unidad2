@@ -30,6 +30,8 @@ namespace ExamenUnidad2.Entities
 
         [Column("Cantidad")] 
         public int Cantidad { get; set; } 
+
+        
     }
     
 }

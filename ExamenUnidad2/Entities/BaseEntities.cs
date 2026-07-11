@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace ExamenUnidad2.Entities
 {
-    public class BaseEntities
+    public class BaseEntities 
     {
         public class BaseEntity
     {
@@ -27,7 +28,7 @@ namespace ExamenUnidad2.Entities
         public decimal Margen { get; set; }
 
         [Column("Inventario")] 
-        public decimal Inventario { get; set; }
+        public decimal Inventario  { get; set; }
 
         [Column("Cantidad")] 
         public int Cantidad { get; set; }

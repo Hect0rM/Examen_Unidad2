@@ -24,11 +24,21 @@ namespace ExamenUnidad2.Controller
 
         }
 
-        [HttpGet]//Este método responde a las peticiones GET sin parámetros (es decir, cuando se pide /api/categories). Devuelve toda la lista de categorías usando Ok(_categories). Ok() es un método que responde con un código 200 (éxito) y los datos.
+        [HttpGet]
         public IActionResult GetAll()
         {
             return Ok(_inventario);
         }
+
+        [HttpPost]//Este método responde a las peticiones POST. Es decir, cuando se envía una nueva categoría en el cuerpo de la petición (JSON). Se agrega a la lista _categories, se muestra un mensaje en la
+        public IActionResult Post([FromBody]CategoryEntities category)
+        {
+            _inventario.Add(category);
+            Console.WriteLine($"Categoria Agregada: {category.Nombre}, {category.PrecioDeCompra}, {category.PrecioDeVenta}, {category.Cantidad},");
+            return Ok("Cambio Hechos");
+        }
+
+
 
     }
 }
